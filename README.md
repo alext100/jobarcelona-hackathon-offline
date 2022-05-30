@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/1f0cf663-c655-4812-a0c5-71467228f8a1/deploy-status)](https://app.netlify.com/sites/jobarcelona-telefonica-front/deploys)
 # Background
 
 No ha sido desapercibido que el contexto actual es muy delicado en el mundo del fútbol. La
