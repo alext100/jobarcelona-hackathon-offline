@@ -1,8 +1,20 @@
-# Getting Started with Create React App
+# Background
+
+No ha sido desapercibido que el contexto actual es muy delicado en el mundo del fútbol. La
+audiencia y la falta de un 2020 sin la venta de entradas ha hecho que muchos clubes
+tengan una postura económica muy delicada. Para ello se nos encomienda una tarea de
+suma responsabilidad, crear un sistema que permita asignar precios a jugadores de forma
+objetiva, evitando la especulación. 
+
+## Frontend
+
+El objetivo aquí será conseguir un web app que permita controlar esto
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
