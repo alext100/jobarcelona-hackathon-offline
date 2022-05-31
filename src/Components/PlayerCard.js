@@ -151,10 +151,10 @@ const PlayerCard = () => {
           </Col>
           <Col>
             <h2>Information</h2>
-            <p>Age: {player?.age}</p>
-            <p>Position {player?.position}</p>
-            <p>Nation {player?.nation}</p>
-            <p> Team {player?.team}</p>
+            <p>Age: <b>{player?.age}</b></p>
+            <p>Position: <b>{player?.position}</b></p>
+            <p>Nation: <b>{player?.nation}</b></p>
+            <p>Team: <b>{player?.team}</b></p>
           </Col>
         </Row>
         <Row className="p-3">
@@ -166,11 +166,10 @@ const PlayerCard = () => {
           <Col>
             <h2>Statistics</h2>
 
-            <p> Team {player?.team}</p>
-            <p> Selections Nation {player?.selections_nation}</p>
-            <p> Assist Champ {player?.assist_champ}</p>
-            <p> Assist Cup {player?.assist_cup}</p>
-            <p>Assist Continent {player?.assist_continent}</p>
+            <p>Selections Nation: <b>{player?.selections_nation}</b></p>
+            <p>Assist Champ: <b>{player?.assist_champ}</b></p>
+            <p>Assist Cup: <b>{player?.assist_cup}</b></p>
+            <p>Assist Continent: <b>{player?.assist_continent}</b></p>
           </Col>
 
           <Col>
