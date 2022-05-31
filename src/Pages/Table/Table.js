@@ -182,7 +182,7 @@ const Table = () => {
               </button>{" "}
             </Link>
           </Col>
-          <Col className="m-6">
+          <Col className="m-6 col-btn">
             <Link to={`charts`} state={{ playersToCompare }}>
               <button className="underline-link" disabled={!isMultipleRowSelected}>
                 Compare players
