@@ -1,6 +1,5 @@
 /* eslint-disable camelcase */
 import React from "react";
-import { Card, Container } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 // eslint-disable-next-line import/no-cycle
 import ChartExample from "./StackedBarCharts";
