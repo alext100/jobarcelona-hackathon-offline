@@ -3,6 +3,7 @@
 @import "../elements/navbar";
 @import "../elements/footer";
 @import "../elements/btn";
+@import "../elements/form";
 
 //luego lo llamo con @include
 
@@ -21,7 +22,7 @@
 // }
 
 @mixin bars {
-  background-color: $font-color-secondary !important;
+  background-color: $font-color-secondary  !important;
 }
 
 .main-content {
