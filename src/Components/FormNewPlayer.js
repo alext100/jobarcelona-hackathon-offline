@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
 import { Router } from "react-router-dom";
+import ModalAnalyze from "./ModalAnalyze";
 
 const FormNewPlayer = () => {
   const [validated, setValidated] = useState(false);
@@ -15,23 +16,32 @@ const FormNewPlayer = () => {
     price: undefined,
   });
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const { age, goals_selection, selections_nation, goal_champ, goal_cup, goal_continent, price } =
     player;
 
   const handleChange = (e) => {
     setPlayer({
       ...player,
-      [e.target.name]: e.target.value,
+      [e.target.id]: e.target.value,
     });
   };
 
   const handleSubmit = (event) => {
+    event.preventDefault();
     const form = event.currentTarget;
+
     if (form.checkValidity() === false) {
       event.preventDefault();
       event.stopPropagation();
     }
+
     setValidated(true);
+
     console.log("player: ", player);
     /* Router.push("/someNewPageWithAnalysis"); */
   };
@@ -42,10 +52,11 @@ const FormNewPlayer = () => {
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
           <Row>
             <Col>
-              <Form.Group className="mb-3" controlId="formAge">
+              <Form.Group className="mb-3">
                 <Form.Label>Age</Form.Label>
                 <Form.Control
                   value={age}
+                  id="age"
                   onChange={handleChange}
                   type="number"
                   min="16"
@@ -54,10 +65,11 @@ const FormNewPlayer = () => {
                   required
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formGoalsSelection">
+              <Form.Group className="mb-3" >
                 <Form.Label>Goals Selection</Form.Label>
                 <Form.Control
                   value={goals_selection}
+                  id="goals_selection"
                   onChange={handleChange}
                   type="number"
                   min="0"
@@ -65,21 +77,23 @@ const FormNewPlayer = () => {
                   required
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formGoalsSelection">
+              <Form.Group className="mb-3" >
                 <Form.Label>Selections Nation</Form.Label>
                 <Form.Control
                   value={selections_nation}
                   onChange={handleChange}
+                  id="selections_nation"
                   type="number"
                   min="0"
                   placeholder="Selections Nation"
                   required
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formGoalsChamp">
+              <Form.Group className="mb-3">
                 <Form.Label>Goal Champ</Form.Label>
                 <Form.Control
                   value={goal_champ}
+                  id="goal_champ"
                   onChange={handleChange}
                   type="number"
                   min="0"
@@ -89,10 +103,11 @@ const FormNewPlayer = () => {
               </Form.Group>
             </Col>
             <Col>
-              <Form.Group className="mb-3" controlId="formGoalsCup">
+              <Form.Group className="mb-3">
                 <Form.Label>Goal Cup</Form.Label>
                 <Form.Control
                   value={goal_cup}
+                  id="goal_cup"
                   onChange={handleChange}
                   type="number"
                   min="0"
@@ -100,10 +115,11 @@ const FormNewPlayer = () => {
                   required
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formGoalsContinent">
+              <Form.Group className="mb-3">
                 <Form.Label>Goal Continent</Form.Label>
                 <Form.Control
                   value={goal_continent}
+                  id="goal_continent"
                   onChange={handleChange}
                   type="number"
                   min="0"
@@ -111,10 +127,11 @@ const FormNewPlayer = () => {
                   required
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formGoalsContinent">
+              <Form.Group className="mb-3">
                 <Form.Label>Enter your price</Form.Label>
                 <Form.Control
                   value={price}
+                  id="price"
                   onChange={handleChange}
                   type="number"
                   min="0"
@@ -123,9 +140,12 @@ const FormNewPlayer = () => {
                   required
                 />
               </Form.Group>
-              <Form.Group className="mb-3" controlId="formPosition">
+              <Form.Group className="mb-3">
                 <Form.Label>Position</Form.Label>
-                <Form.Select aria-label="Select player position">
+                <Form.Select
+                  aria-label="Select player position"
+                  id="position"
+                  onChange={handleChange}>
                   <option>Choose player position</option>
                   <option value="Goalkeeper">Goalkeeper</option>
                   <option value="LeftWinger">LeftWinger</option>
@@ -142,13 +162,14 @@ const FormNewPlayer = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            <Button variant="primary" type="submit">
+            <Button variant="primary" type="submit" onClick={handleShow}>
               Analyze
             </Button>
           </Row>
-        </Form>
-      </Container>
-    </InputGroup>
+        </Form >
+        <ModalAnalyze show={show} onHide={handleClose} data={player} />
+      </Container >
+    </InputGroup >
   );
 };
 
