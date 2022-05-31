@@ -6,9 +6,7 @@ function getTotal(datum) {
   return datum.price;
 }
 
-/* const formatter = ({ value }) => (value === null || 0 ? "" : value); */
-
-export default class ChartExample extends Component {
+export default class StackedBarCharts extends Component {
   constructor(props) {
     super(props);
 
@@ -46,7 +44,6 @@ export default class ChartExample extends Component {
             yName: "Goals Selection",
             xName: "id",
             stacked: true,
-            /* label: { formatter }, */
           },
           {
             type: "bar",
@@ -106,9 +103,6 @@ export default class ChartExample extends Component {
       },
     };
   }
-
-  // eslint-disable-next-line class-methods-use-this
-  componentDidMount() {}
 
   render() {
     return <AgChartsReact options={this.state.options} />;

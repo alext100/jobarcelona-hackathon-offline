@@ -23,7 +23,7 @@
 // }
 
 @mixin bars {
-  background-color: $font-color-secondary  !important;
+  background-color: $font-color-secondary !important;
 }
 
 .main-content {
@@ -34,7 +34,8 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -42,10 +43,6 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   min-height: 100vh; ///for the footer
   position: relative; ///for the footer
-}
-
-* {
-  font-family: "Montserrat";
 }
 
 a {
@@ -70,7 +67,6 @@ a {
 .form-input-group {
   margin-top: 50px;
 }
-
 
 .login-container {
   background-color: rgb(237, 255, 249);
