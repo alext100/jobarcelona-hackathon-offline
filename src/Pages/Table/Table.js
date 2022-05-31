@@ -174,22 +174,21 @@ const Table = () => {
       <Container>
         <h1>Statistics</h1>
         {/* envolvemos con row y así el contenido tendrá márgenes */}
-        <Row>
-          <Link to={`player/${player.id}`} state={{ player }}>
-            <Button variant="primary" size="lg" className="mb-3 mt-1" disabled={!isRowSelected}>
-              Show player info
-            </Button>{" "}
-          </Link>
-          <Link to={`charts`} state={{ playersToCompare }}>
-            <Button
-              variant="primary"
-              size="lg"
-              className="mb-3 mt-1"
-              disabled={!isMultipleRowSelected}
-            >
-              Compare players
-            </Button>{" "}
-          </Link>
+        <Row className="row-btn">
+          <Col className="m-2">
+            <Link to={`player/${player.id}`} state={{ player }}>
+              <button className="underline-link" disabled={!isRowSelected}>
+                Show player info
+              </button>{" "}
+            </Link>
+          </Col>
+          <Col className="m-2">
+            <Link to={`charts`} state={{ playersToCompare }}>
+              <button className="underline-link" disabled={!isMultipleRowSelected}>
+                Compare players
+              </button>{" "}
+            </Link>
+          </Col>
           <div className="ag-theme-alpine" style={gridStyle}>
             <AgGridReact
               ref={gridRef}
