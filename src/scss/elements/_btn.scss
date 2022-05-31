@@ -7,6 +7,7 @@ padding: $unit;
 margin:  0.5rem auto;
 
 
+
 font-size: 1.5rem;
       &:hover {
           color: $terciary-color;
@@ -19,4 +20,7 @@ font-size: 1.5rem;
 
   display: flex;
  justify-content: center;
+ align-items: center;
 }
+
+

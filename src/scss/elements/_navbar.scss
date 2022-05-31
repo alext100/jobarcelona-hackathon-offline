@@ -14,7 +14,8 @@
   
   color: $primary-color !important;
 
-      font-size: $unit*2.5;
+
+      font-size: $unit*3;
 }
 
 
@@ -25,13 +26,13 @@
   position: fixed;
   z-index: 2000;
   top: 0;
-
   margin-right: 0;
   width: 100%;
     background-size: cover;
   a {
       color: $font-color-primary !important;
-      font-weight: 400;
+        text-shadow: 1px 2px 3px black !important;
+      font-weight: 500;
       display:inline-block;
       margin-right: 1rem;
   
