@@ -18,7 +18,7 @@ const Table = () => {
   const suppressRowHoverHighlight = true;
   const columnHoverHighlight = true;
   const pagination = true;
-  const paginationPageSize = 15;
+  const paginationPageSize = 100;
 
   const getApi = () => {
     axios.get("train.json").then((res) => {
@@ -47,7 +47,7 @@ const Table = () => {
     {
       field: "team",
       headerName: "Team",
-      maxWidth: 150,
+      maxWidth: 160,
       sortable: true,
       filter: true,
       resizable: true,
@@ -55,7 +55,7 @@ const Table = () => {
     {
       field: "position",
       headerName: "Position",
-      maxWidth: 150,
+      maxWidth: 170,
       sortable: true,
       filter: true,
       resizable: true,
@@ -63,7 +63,7 @@ const Table = () => {
     {
       field: "price",
       headerName: "Price",
-      maxWidth: 95,
+      maxWidth: 115,
       sortable: true,
       filter: true,
       resizable: true,
@@ -87,7 +87,7 @@ const Table = () => {
     {
       field: "goals_selection",
       headerName: "Goals Selection",
-      maxWidth: 145,
+      maxWidth: 175,
       sortable: true,
       filter: true,
       resizable: true,
@@ -95,7 +95,7 @@ const Table = () => {
     {
       field: "selections_nation",
       headerName: "Selections Nation",
-      maxWidth: 160,
+      maxWidth: 180,
       sortable: true,
       filter: true,
       resizable: true,
@@ -103,7 +103,7 @@ const Table = () => {
     {
       field: "goal_champ",
       headerName: "Goal Champ",
-      maxWidth: 130,
+      maxWidth: 150,
       sortable: true,
       filter: true,
       resizable: true,
@@ -111,7 +111,7 @@ const Table = () => {
     {
       field: "assist_champ",
       headerName: "Assist Champ",
-      maxWidth: 140,
+      maxWidth: 160,
       sortable: true,
       filter: true,
       resizable: true,
@@ -119,7 +119,7 @@ const Table = () => {
     {
       field: "own_goal_champ",
       headerName: "Own Goal Champ",
-      maxWidth: 160,
+      maxWidth: 170,
       sortable: true,
       filter: true,
       resizable: true,
@@ -127,7 +127,7 @@ const Table = () => {
     {
       field: "yellow_card_champ",
       headerName: "Yellow Card Champ",
-      maxWidth: 170,
+      maxWidth: 180,
       sortable: true,
       filter: true,
       resizable: true,
