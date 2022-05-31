@@ -22,7 +22,7 @@
 // }
 
 @mixin bars {
-  background-color: $font-color-secondary  !important;
+  background-color: $font-color-secondary !important;
 }
 
 .main-content {
@@ -33,7 +33,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -44,7 +44,7 @@ body {
 }
 
 * {
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -69,7 +69,6 @@ a {
 .form-input-group {
   margin-top: 50px;
 }
-
 
 .login-container {
   background-color: rgb(237, 255, 249);
