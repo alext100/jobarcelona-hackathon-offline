@@ -31,6 +31,9 @@ const Header = () => (
           <Nav.Link className="underline-link" as={Link} to="/analyze">
             Analyze player
           </Nav.Link>
+          <Nav.Link className="underline-link" as={Link} to="/login">
+            Login
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
