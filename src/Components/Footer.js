@@ -1,4 +1,4 @@
-import { Col, Row, Container } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { BsTwitter, BsFacebook } from "react-icons/bs";
 import { GrInstagram } from "react-icons/gr";

@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import "ag-grid-community/dist/styles/ag-grid.css";
 import "ag-grid-community/dist/styles/ag-theme-alpine.css";
 import { AgGridReact } from "ag-grid-react";
 import axios from "axios";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Table = () => {
@@ -178,20 +178,20 @@ const Table = () => {
         {/* envolvemos con row y así el contenido tendrá márgenes */}
         <Row className="row-btn">
           <div className="buttonsTable">
-            {/* <Col className="m-6 col-btn"> */}
-            <Link to={`player/${player.id}`} state={{ player }}>
-              <button className="underline-link" disabled={!isRowSelected}>
-                Show player info
-              </button>{" "}
-            </Link>
-            {/* </Col> */}
-            {/* <Col className="m-6"> */}
-            <Link to={`charts`} state={{ playersToCompare }}>
-              <button className="underline-link" disabled={!isMultipleRowSelected}>
-                Compare players
-              </button>{" "}
-            </Link>
-            {/* </Col> */}
+            <Col className="m-6 col-btn">
+              <Link to={`player/${player.id}`} state={{ player }}>
+                <button className="underline-link" disabled={!isRowSelected}>
+                  Show player info
+                </button>{" "}
+              </Link>
+            </Col>
+            <Col className="m-6 col-btn">
+              <Link to={`charts`} state={{ playersToCompare }}>
+                <button className="underline-link" disabled={!isMultipleRowSelected}>
+                  Compare players
+                </button>{" "}
+              </Link>
+            </Col>
           </div>
           <div className="ag-theme-alpine" style={gridStyle}>
             <AgGridReact
