@@ -69,3 +69,18 @@ a {
 .form-input-group {
   margin-top: 50px;
 }
+
+
+.login-container {
+  background-color: rgb(237, 255, 249);
+  max-width: 300px;
+  padding: 10px;
+  border: solid #dcdbdb 1px;
+  border-radius: 3%;
+}
+
+.login-button {
+  width: -webkit-fill-available;
+  margin: 5px !important;
+  padding: 3px !important;
+}
