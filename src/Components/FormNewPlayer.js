@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import { useState } from "react";
 import { Button, Col, Container, Form, InputGroup, Row } from "react-bootstrap";
-import { Router } from "react-router-dom";
 import ModalAnalyze from "./ModalAnalyze";
 
 const FormNewPlayer = () => {
@@ -43,7 +42,6 @@ const FormNewPlayer = () => {
     setValidated(true);
 
     console.log("player: ", player);
-    /* Router.push("/someNewPageWithAnalysis"); */
   };
 
   return (
@@ -74,7 +72,7 @@ const FormNewPlayer = () => {
                           required
                         />
                       </Form.Group>
-                      <Form.Group className="mb-3" >
+                      <Form.Group className="mb-3">
                         <Form.Label>Goals Selection</Form.Label>
                         <Form.Control
                           value={goals_selection}
@@ -86,7 +84,7 @@ const FormNewPlayer = () => {
                           required
                         />
                       </Form.Group>
-                      <Form.Group className="mb-3" >
+                      <Form.Group className="mb-3">
                         <Form.Label>Selections Nation</Form.Label>
                         <Form.Control
                           value={selections_nation}
@@ -154,7 +152,8 @@ const FormNewPlayer = () => {
                         <Form.Select
                           aria-label="Select player position"
                           id="position"
-                          onChange={handleChange}>
+                          onChange={handleChange}
+                        >
                           <option>Choose player position</option>
                           <option value="Goalkeeper">Goalkeeper</option>
                           <option value="LeftWinger">LeftWinger</option>
@@ -175,13 +174,13 @@ const FormNewPlayer = () => {
                       Analyze
                     </Button>
                   </Row>
-                </Form >
+                </Form>
                 <ModalAnalyze show={show} onHide={handleClose} data={player} />
               </div>
-            </Container >
+            </Container>
           </Col>
         </Row>
-      </InputGroup >
+      </InputGroup>
     </>
   );
 };
