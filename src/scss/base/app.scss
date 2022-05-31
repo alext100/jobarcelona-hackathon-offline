@@ -2,6 +2,7 @@
 @import './utils'; //archivos genéricos que podrían utilizarse en cualquier otro proyecto
 @import '../elements/navbar';
 @import '../elements/footer';
+@import '../elements/btn';
 
 
 //luego lo llamo con @include
