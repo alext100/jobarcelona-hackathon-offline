@@ -56,12 +56,12 @@ const FormNewPlayer = () => {
       <InputGroup className="mb-3 form-input-group centerInputGroup">
         <Row>
           <Col md={12}>
-            <Container style={{ width: "60vh" }}>
-              <div>
+            <div className="analyzeContainer">
+              <Container style={{ width: "60vh" }}>
                 <Form noValidate validated={validated} onSubmit={handleSubmit}>
                   <Row>
                     <Col>
-                      <Form.Group className="mb-3">
+                      <Form.Group className="mb-3 mt-2">
                         <Form.Label>Age</Form.Label>
                         <Form.Control
                           value={age}
@@ -112,7 +112,7 @@ const FormNewPlayer = () => {
                       </Form.Group>
                     </Col>
                     <Col>
-                      <Form.Group className="mb-3">
+                      <Form.Group className="mb-3 mt-2">
                         <Form.Label>Goal Cup</Form.Label>
                         <Form.Control
                           value={goal_cup}
@@ -171,14 +171,14 @@ const FormNewPlayer = () => {
                         </Form.Select>
                       </Form.Group>
                     </Col>
-                    <Button variant="primary" type="submit" onClick={handleShow}>
+                    <Button type="submit" onClick={handleShow} className="analyzeSubmitButton underline-link">
                       Analyze
                     </Button>
                   </Row>
                 </Form >
                 <ModalAnalyze show={show} onHide={handleClose} data={player} />
-              </div>
-            </Container >
+              </Container >
+            </div>
           </Col>
         </Row>
       </InputGroup >
