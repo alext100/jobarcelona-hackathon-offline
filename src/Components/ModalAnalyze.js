@@ -2,7 +2,8 @@ import { Modal, Button } from 'react-bootstrap';
 
 /* eslint-disable react/prop-types */
 function ModalAnalyze({ show, onHide, data }) {
-    console.log()
+    window.scrollTo(0, 0)
+
     return (
         <Modal show={show} onHide={onHide} centered>
             <Modal.Header closeButton>

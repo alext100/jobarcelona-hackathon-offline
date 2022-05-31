@@ -30,6 +30,8 @@ const Table = () => {
     getApi();
   }, []);
 
+  window.scrollTo(0, 0)
+
   const [columnDefs] = useState([
     {
       field: "id",
@@ -172,23 +174,25 @@ const Table = () => {
   return (
     <>
       <Container>
-        <h1 className="main-title">Statistics</h1>
+        <h1 className="main-title">Explore</h1>
         {/* envolvemos con row y así el contenido tendrá márgenes */}
         <Row className="row-btn">
-          <Col className="m-6 col-btn">
+          <div className="buttonsTable">
+            {/* <Col className="m-6 col-btn"> */}
             <Link to={`player/${player.id}`} state={{ player }}>
               <button className="underline-link" disabled={!isRowSelected}>
                 Show player info
               </button>{" "}
             </Link>
-          </Col>
-          <Col className="m-6">
+            {/* </Col> */}
+            {/* <Col className="m-6"> */}
             <Link to={`charts`} state={{ playersToCompare }}>
               <button className="underline-link" disabled={!isMultipleRowSelected}>
                 Compare players
               </button>{" "}
             </Link>
-          </Col>
+            {/* </Col> */}
+          </div>
           <div className="ag-theme-alpine" style={gridStyle}>
             <AgGridReact
               ref={gridRef}

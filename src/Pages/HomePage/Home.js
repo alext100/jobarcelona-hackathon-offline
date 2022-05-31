@@ -28,7 +28,7 @@ const HomePage = () => {
   sr.reveal(".cardsSection h1", { delay: 150 });
   sr.reveal(".card-title", { delay: 150 });
   sr.reveal(".card-text", { delay: 250 });
-  sr.reveal(".goTableButton", { delay: 50 });
+  sr.reveal(".goTableButton", { delay: 100 });
 
   return (
     <>
@@ -110,9 +110,16 @@ const HomePage = () => {
               </Card>
             </Col>
           </CardGroup>
-
-          <div className="goTableButton">
-            <Link to="/table">Discover</Link>
+          <div className="containerButtons">
+            <div className="goTableButton">
+              <Link to="/table">Discover</Link>
+            </div>
+            <div className="goTableButton">
+              <Link to="/table">Compare</Link>
+            </div>
+            <div className="goTableButton">
+              <Link to="/analyze">Analyze</Link>
+            </div>
           </div>
         </Row>
       </Container>

@@ -101,6 +101,13 @@
     border: 2px solid rgb(62, 103, 179);
 }
 
+.containerButtons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
 
 @media(max-width: 992px) {
     .cardStyle {
@@ -114,7 +121,7 @@
         justify-content: center !important;
     }
 
-    .imgHome{
+    .imgHome {
         background-attachment: scroll;
 
     }
