@@ -172,17 +172,17 @@ const Table = () => {
   return (
     <>
       <Container>
-        <h1>Statistics</h1>
+        <h1 className="main-title">Statistics</h1>
         {/* envolvemos con row y así el contenido tendrá márgenes */}
         <Row className="row-btn">
-          <Col className="m-2">
+          <Col className="m-6 col-btn">
             <Link to={`player/${player.id}`} state={{ player }}>
               <button className="underline-link" disabled={!isRowSelected}>
                 Show player info
               </button>{" "}
             </Link>
           </Col>
-          <Col className="m-2">
+          <Col className="m-6">
             <Link to={`charts`} state={{ playersToCompare }}>
               <button className="underline-link" disabled={!isMultipleRowSelected}>
                 Compare players
