@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Card, Container, Col, Row } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import { useLocation } from "react-router-dom";
 import Grafico from "./Grafico";
 import GraficoPie from "./GraficoPie";
