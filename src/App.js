@@ -10,6 +10,8 @@ import PlayersCharts from "./Components/PlayersCharts";
 import Footer from "./Components/Footer";
 import "@fontsource/montserrat";
 import "bootstrap/dist/css/bootstrap.min.css";
+import FormNewPlayer from "./Components/FormNewPlayer";
+import Login from "./Components/Login";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
             <Route path="table/player/:id" element={<PlayerCard />}></Route>
             <Route path="table/charts" element={<PlayersCharts />}></Route>
             <Route path="charts" element={<Charts />}></Route>
+            <Route path="analyze" element={<FormNewPlayer />}></Route>
+            <Route path="login" element={<Login />}></Route>
           </Routes>
         </div>
         <Footer />
