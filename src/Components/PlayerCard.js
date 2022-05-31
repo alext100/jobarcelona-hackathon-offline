@@ -146,7 +146,7 @@ const PlayerCard = () => {
           <Col>
             <Row>
               <h1 style={{ fontWeight: "bolder" }}>ID: {player?.id}</h1>
-              <h2>Price {player?.price}</h2>
+              <h2>Price: <b>{player?.price}€</b></h2>
             </Row>
           </Col>
           <Col>
