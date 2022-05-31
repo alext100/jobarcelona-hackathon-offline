@@ -1,0 +1,67 @@
+@import './config'; //colores
+@import './utils'; //archivos genéricos que podrían utilizarse en cualquier otro proyecto
+@import '../elements/navbar';
+@import '../elements/footer';
+
+
+//luego lo llamo con @include
+
+// @mixin centered {
+//   margin: auto;
+//   padding: 1rem;
+//   justify-items: center;
+//   text-align: center;
+// }
+
+
+// @mixin card {
+//   background-color: $terciary-color;
+//   padding: 50px;
+//   box-shadow: 0 0 10px $secondary-color;
+//   border-radius: 10px;
+// }
+
+
+
+@mixin bars {
+  background-color: $font-color-secondary !important;
+}
+
+.main-content{
+  margin: 6rem 0 0;
+  padding: 0 0 15rem;
+min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: $primary-color;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  min-height: 100vh; ///for the footer
+  position: relative; ///for the footer
+}
+
+*{
+  font-family: "Montserrat";
+
+}
+
+a {
+  color: $secondary-color;
+  text-decoration: none;
+}
+
+
+// h3 {
+//   font-weight: lighter;
+//   font-size: size(3);
+// }
+
+.m-auto {
+  margin: 0 auto;
+}
+

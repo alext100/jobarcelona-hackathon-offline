@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./scss/base/app.scss";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Header from "./Components/Header";
+import Home from "./Pages/HomePage/Home";
+import Table from "./Pages/Table/Table";
+import Charts from "./Pages/Charts/Charts";
+import PlayerCard from "./Components/PlayerCard";
+import PlayersCharts from "./Components/PlayersCharts";
+// eslint-disable-next-line import/no-named-as-default
+import Footer from "./Components/Footer";
+import "@fontsource/montserrat";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Header />
+        <div className="main-content">
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="table" element={<Table />}></Route>
+            <Route path="table/player/:id" element={<PlayerCard />}></Route>
+            <Route path="table/charts" element={<PlayersCharts />}></Route>
+            <Route path="charts" element={<Charts />}></Route>
+          </Routes>
+        </div>
+        <Footer />
+      </Router>
+    </>
   );
 }
 
