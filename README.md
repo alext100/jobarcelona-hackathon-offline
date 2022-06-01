@@ -11,6 +11,10 @@ objetiva, evitando la especulación.
 
 El objetivo aquí será conseguir un web app que permita controlar esto
 
+### SonarCloud Quality Gate
+
+https://sonarcloud.io/summary/overall?id=jobarcelona-hackathon-offline
+
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
